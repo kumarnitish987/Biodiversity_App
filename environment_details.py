@@ -1,6 +1,14 @@
 import requests
 from PIL import Image
 import piexif
+from dotenv import load_dotenv
+import os
+
+# Load the .env file
+load_dotenv()
+
+AZURE_MAP_BASE_URI = os.environ['azure_map_base_uri']
+AZURE_MAP_KEY = os.environ['azure_map_key']
 
 def get_decimal_from_dms(dms, ref):
     # Convert DMS (Degrees, Minutes, Seconds) to decimal format
@@ -45,7 +53,7 @@ def get_gps_info(image_path):
         return None
 
 def get_current_environment_conditions(lat, lon):
-  url = f'https://atlas.microsoft.com/weather/currentConditions/json?api-version=1.1&query={lat},{lon}&subscription-key=6wxJJ9n07L45hUeCEPzbdPbImO8ftJSW2N0DR8IwSnjuPHK7eQuWJQQJ99AIACYeBjFXlSElAAAgAZMPAcYg'
+  url = f'{AZURE_MAP_BASE_URI}?api-version=1.1&query={lat},{lon}&subscription-key={AZURE_MAP_KEY}'
 
   # Make a request to the API
   response = requests.get(url)
