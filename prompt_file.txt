@@ -1,4 +1,4 @@
- Given the latitude: 12.4244 N, longitude : 75.7382 E, temperature : 20C, and precipitation: 8.600mm information of an area, provide a list of plants and trees that are native to that region and can thrive in those conditions. Additionally, include maintenance suggestions for each plant and tree. I will now send data in the format Longitude Latitude Temperature Precipitation and please suggest plants accordingly in pattern
+ Given the latitude: {latitude}, longitude : {longitude}, temperature : {temperature}, and precipitation: {precipitation} information of an area, provide a list of plants and trees that are native to that region and can thrive in those conditions. Additionally, include maintenance suggestions for each plant and tree. I will now send data in the format Longitude Latitude Temperature Precipitation and please suggest plants accordingly in pattern
 Plants- List of plants name
 Trees-List of trees
 Spices-List of spices

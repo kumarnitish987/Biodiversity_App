@@ -53,7 +53,9 @@ def get_current_environment_conditions(lat, lon):
   # Check if the request was successful
   if response.status_code == 200:
       data = response.json()
-      return data
+      temperature = data.get('results')[0]['temperature']['value']
+      precipitation = data.get('results')[0]['precipitationSummary']['past24Hours']['value']
+      return temperature, precipitation
   else:
       print(f"Error: {response.status_code}")
     
