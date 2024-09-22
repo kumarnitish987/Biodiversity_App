@@ -31,6 +31,10 @@ def get_plants_suggestions_by_image():
         lat, lon = get_gps_info(file_path)
         temperature, precipitation = get_current_environment_conditions(lat, lon)
         response = azure_chat_openai(lat, lon, temperature, precipitation)
+
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            
         return jsonify(response)
     except Exception as e:
         raise e 
