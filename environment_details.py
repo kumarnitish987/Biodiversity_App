@@ -66,4 +66,4 @@ def get_current_environment_conditions(lat, lon):
       return temperature, precipitation
   else:
       print(f"Error: {response.status_code}")
-    
+

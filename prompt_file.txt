@@ -1,5 +1,6 @@
- Given the latitude: {latitude}, longitude : {longitude}, temperature : {temperature}, and precipitation: {precipitation} information of an area, provide a list of plants and trees that are native to that region and can thrive in those conditions. Additionally, include maintenance suggestions for each plant and tree. I will now send data in the format Longitude Latitude Temperature Precipitation and please suggest plants accordingly in pattern
-Plants- List of plants name
-Trees-List of trees
-Spices-List of spices
-Succulents-List of succulents.
+Given the latitude: {latitude}, longitude : {longitude}, temperature : {temperature}, and precipitation: {precipitation} information of an area, provide a list of plants and trees that are native to that region and can thrive in those conditions. Additionally, include maintenance suggestions for each plant and tree. I will now send data in the format Longitude Latitude Temperature Precipitation. Please provide the response in the following format:
+IntroIntroduction: <introduction>
+Plants: <name>, <maintenance>,<name>, <maintenance>
+Trees: <name>, <maintenance>,<name>, <maintenance>
+Spices: <name>, <maintenance>,<name>, <maintenance>
+It should show the data in layman terms and not include scientific names of plants
